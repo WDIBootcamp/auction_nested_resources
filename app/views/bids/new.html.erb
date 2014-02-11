@@ -1,0 +1,6 @@
+<h1> Bid Away! </h1>
+
+<%= form_for [@auction, @bid] do |f| %>
+
+	<% f.text_field :amount, placeholder: "bid amount"%>
+<% end %>
