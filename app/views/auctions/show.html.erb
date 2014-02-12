@@ -1,2 +1,9 @@
-<h1>Auctions#show</h1>
-<p>Find me in app/views/auctions/show.html.erb</p>
+<h1> Auction: <%= @auction.title %></h1> 
+<h2> minimum bid is <%= @auction.bids.first.amount %></h2>
+
+<%= @auction.bids.each do |bid| %>
+
+	<div>new bid: <%= bid.amount %></div>
+
+<% end %>
+

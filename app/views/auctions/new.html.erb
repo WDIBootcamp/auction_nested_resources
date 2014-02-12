@@ -1,2 +1,9 @@
-<h1>Auctions#new</h1>
-<p>Find me in app/views/auctions/new.html.erb</p>
+<h1>New Auction</h1>
+
+<%= form_for @auction do |f| %>
+	<%= f.text_field :title, placeholder: "Name of item" %>
+	<%= f.fields_for :bids, @auction.bids.build do |b| %>
+		<%= b.text_field :amount, placeholder: "minimum price" %>
+	<% end %>
+	<%= f.submit %>
+<% end %>

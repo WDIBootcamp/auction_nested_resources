@@ -32,6 +32,30 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development do 
+	# better looking errors
+	gem 'better_errors'
+	#live shell - in browser shell
+	gem 'binding_of_caller'
+	gem 'meta_request'
+	#if our app is not breaking but you still want to check out your code
+	gem 'pry'
+	#you can hit next in pry and check line by line -- there is much more
+	gem 'pry-byebug'
+
+	#show to see all of your options
+	# gem 'pry_rails'
+
+	#check out your hashes in pry more cleanly 
+	gem 'awesome_print'
+
+	#dont use quiet_assets AND pry-byebug, might not work together
+	# gem 'quiet_assets'
+
+	#to generate files for an application layout, navigation links, and flash messages styled with Foundation CSS classes and layout.
+	gem 'rails_layout'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
